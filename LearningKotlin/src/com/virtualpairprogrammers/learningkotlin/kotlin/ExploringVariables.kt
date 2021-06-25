@@ -1,6 +1,8 @@
 package com.virtualpairprogrammers.learningkotlin.kotlin
 
+import java.math.BigDecimal
 import java.util.*
+import kotlin.math.roundToInt
 
 fun main(args: Array<String>) {
     //System.out.println("Hello word");
@@ -32,4 +34,32 @@ fun main(args: Array<String>) {
 
     val changeStory = story.replaceAfterLast("it", " would be dawn.")
     println(changeStory)
+
+    val myDouble = 21.4
+    println("Is myDouble is Double ${myDouble is Double}") // 'is' is like instanceof
+    println("myDouble is a ${myDouble::class.qualifiedName}") // check the type kotlin.Double
+    println("myDouble's javaClass ${myDouble.javaClass}") // double
+
+    val myInteger = myDouble.roundToInt()
+    println("myInteger is a ${myInteger::class.qualifiedName}") // check the type kotlin.Int
+
+    //val anotherInteger : Integer = 17 // compilation error You cannot assigned a Java Integer to kotlin.Int
+    val anotherInteger: Int = 17 // compilation error You cannot assigned a Java Integer to kotlin.Int
+
+    val myFloat: Float = 13.6F
+    val result = myFloat + anotherInteger
+    println(result) // 30.6
+
+    //val bd : BigDecimal = BigDecimal(17)
+    val bd = BigDecimal(17)
+
+    val bd2: BigDecimal
+
+    println("hello");
+
+    //println(bd2.abs()) //compilation error, similar to Java bd2 is not yet initialize.
+
+    bd2 = bd.add(BigDecimal(30))
+
+
 }
