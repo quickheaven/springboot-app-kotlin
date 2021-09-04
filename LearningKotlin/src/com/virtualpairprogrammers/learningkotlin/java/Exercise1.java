@@ -2,7 +2,7 @@ package com.virtualpairprogrammers.learningkotlin.java;
 
 import java.util.GregorianCalendar;
 
-public class Execise1 {
+public class Exercise1 {
 
     public static void main(String[] Args) {
         JavaPerson john = new JavaPerson(1L, "Mr", "John", "Blue", new GregorianCalendar(1977, 9, 3));
