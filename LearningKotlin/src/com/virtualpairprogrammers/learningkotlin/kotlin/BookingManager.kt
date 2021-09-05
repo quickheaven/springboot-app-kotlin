@@ -28,7 +28,7 @@ open class BasicBookingManager(authorisationKey: String) :
 
 }
 
-class AdvancedBookingManager : BasicBookingManager("1234"), java.io.Closeable { // implement multiple interface
+class AdvancedBookingManager : BasicBookingManager("12345"), java.io.Closeable { // implement multiple interface
 
     override val version = "2.0"
 
