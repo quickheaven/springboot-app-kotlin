@@ -1,7 +1,21 @@
 package com.virtualpairprogrammers.theater.domain
 
 import java.math.BigDecimal
+import javax.persistence.*
 
-data class Seat(val row: Char, val num: Int, val price: BigDecimal, val description: String) {
+@Entity
+data class Seat(
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "seat_id")
+    val id: Long,
+    @Column(name = "seat_row")
+    val row: Char,
+    @Column(name = "seat_num")
+    val num: Int,
+    @Column(name = "seat_price")
+    val price: BigDecimal,
+    @Column(name = "seat_description")
+    val description: String
+) {
     override fun toString(): String = "Seat $row-$num $$price ($description)"
 }
